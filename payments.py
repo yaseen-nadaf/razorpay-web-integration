@@ -34,7 +34,7 @@ def create_order():
 
 
 
-@subscriptions_api.route('/verify-txn', methods=['POST'])
+@api.route('/verify-txn', methods=['POST'])
 @jwt_required
 @access_required('TABLE')
 def verify_txn():
@@ -48,7 +48,7 @@ def verify_txn():
     ...
                 
 
-@subscriptions_api.route('/failed-txn', methods=['POST'])
+@api.route('/failed-txn', methods=['POST'])
 @jwt_required
 @access_required('TABLE')
 def remove_failed_order():
